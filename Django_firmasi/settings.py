@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-9y1+r^fawd5dig)_m*e0)iz1yymg&h^!at)885=h70$nuo34_6
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'Static_files',
+]
 
 # Application definition
 
@@ -39,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # my appsss
     'pages',
+    'product',
+    
 ]
 
 MIDDLEWARE = [
@@ -56,7 +61,9 @@ ROOT_URLCONF = 'Django_firmasi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR/'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Django_firmasi.context.global_context',
             ],
         },
     },

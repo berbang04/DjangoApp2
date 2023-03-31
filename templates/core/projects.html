@@ -1,0 +1,13 @@
+<div class="row my-4">
+        <div class="col-sm-12">
+                <h1>Projelerimiz</h1>
+        </div>
+        <hr>
+        
+        {% for item in Fake_Db_projects %}
+        <div class="col-sm col-6 mb-2"><img src="{{item}}" alt="" class="w-100 img-thumbnail">
+        </div>
+        {% empty  %}
+        <h3 class="text-danger">proje bulunamadı</h3>
+        {% endfor%}
+</div>

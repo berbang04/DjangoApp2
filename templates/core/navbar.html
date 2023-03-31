@@ -1,0 +1,34 @@
+  <!-- Navbar starts -->
+  <nav class="navbar navbar-expand-lg bg-light fixed-top ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Django</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/' %} active {% endif%} " aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/about/' %} active {% endif%} " href="/about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/vision/' %} active {% endif%} " href="{% url 'vision' %}">Vizyonumuz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/products/' %} active {% endif%} " href="/products/">Ürünlerimiz</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/contact/' %} active {% endif%} " href="/contact/">İletişim</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Navbar ends -->
