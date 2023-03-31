@@ -5,7 +5,7 @@
 
 
 {% block container %}
-<div class="row row-cols-sm-3 ">
+<div class="row ">
     {% for item in products%}
         {% include 'product/component/card.html' with title=item.title detail=item.detail img_url=item.url url=item.id %}  
     {% endfor%}
